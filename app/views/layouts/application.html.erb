@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Noteapp</title>
+    <title> <%= @page_title || "Noteapp" %> </title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -10,6 +10,9 @@
   </head>
 
   <body>
+  <p style="color:green"><%= flash[:notice] %></p>
+    <p style="color:red"><%= flash[:alert] %></p>
+        
     <%= yield %>
   </body>
 </html>
